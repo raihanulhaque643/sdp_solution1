@@ -1,15 +1,16 @@
 <div class='author'>
-    <div class=''>
+    <div class='name'>
         {{ author.name }}
     </div>
-    <div class=''>
+    <div class='bio'>
         {{ author.bio }}
     </div>
-    <div class=''>
+    <div class='link'>
         {{ author.link }}
     </div>
     <div class=''>
-        <button 
+        <button
+        class="btn" 
         *ngIf="!author.favorite"
         (click)="setFavorite(author)"
         >

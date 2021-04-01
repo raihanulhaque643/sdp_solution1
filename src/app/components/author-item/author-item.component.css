@@ -5,4 +5,18 @@
     background:lightgray;
     margin:15px;
     width:400px;
+    border-radius: 10px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.bio {
+    font-style: italic;
+    font-size: smaller;
+}
+
+.link {
+    color: blue;
 }
