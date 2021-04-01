@@ -1,0 +1,25 @@
+<div class='author'>
+    <div class=''>
+        {{ author.name }}
+    </div>
+    <div class=''>
+        {{ author.bio }}
+    </div>
+    <div class=''>
+        {{ author.link }}
+    </div>
+    <div class=''>
+        <button 
+        *ngIf="!author.favorite"
+        (click)="setFavorite(author)"
+        >
+        Add to favorite
+        </button>
+        <button 
+        *ngIf="author.favorite"
+        (click)="removeFavorite(author)"
+        >
+        Remove favorite
+        </button>
+    </div>
+</div>

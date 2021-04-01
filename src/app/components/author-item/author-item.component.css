@@ -1,0 +1,8 @@
+.author {
+    display:flex;
+    flex-direction:column;
+    padding:5px;
+    background:lightgray;
+    margin:15px;
+    width:400px;
+}
