@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthorService {
-  authorsUrl:string = 'https://api.quotable.io/authors?limit=10&skip=0';
-  moreAuthorsUrl:string = 'https://api.quotable.io/authors?limit=10&skip=10';
+  authorsUrl:string = 'https://api.quotable.io/authors?limit=5&skip=0';
+  moreAuthorsUrl:string = 'https://api.quotable.io/authors?limit=5&skip=5';
 
   constructor(private http:HttpClient) { }
 

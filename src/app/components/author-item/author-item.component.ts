@@ -15,13 +15,18 @@ export class AuthorItemComponent implements OnInit {
   }
 
   // Set favorite
-  setFavorite() {
+  setFavorite(author) {
     this.author.favorite = true
+    let favorites = JSON.parse(localStorage.getItem('favorites'))
+    if(favorites == null) favorites = [];
+    favorites.unshift(author)
+    localStorage.setItem("favorites", JSON.stringify(favorites));
   }
 
   // Remove from favorite
-  removeFavorite() {
+  removeFavorite(author) {
     this.author.favorite = false
+    let favorites = JSON.parse(localStorage.getItem('favorites'))
   }
 
 }
