@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorites.component.css']
 })
 export class FavoritesComponent implements OnInit {
+  favorites = JSON.parse(localStorage.getItem('favorites'))
 
   constructor() { }
 

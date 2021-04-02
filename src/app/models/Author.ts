@@ -2,6 +2,6 @@ export class Author {
     _id:string;
     name:string;
     bio:string;
-    favorite:boolean = false;
+    favorite:boolean;
     link:string;
 }
