@@ -1,0 +1,9 @@
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer > button {
+    margin: 0px 10px 10px 10px;
+    width: 30px;
+}   

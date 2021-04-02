@@ -1,3 +1,19 @@
-<app-author-item *ngFor="let author of authors" [author]="author">
-    <li>{{ author.name }}</li>
-</app-author-item>
+<div class=''>
+    <app-author-item *ngFor="let author of authors" [author]="author">
+    </app-author-item>
+    <div class='footer'>
+        <button
+        (click)="prevPage()"
+        [disabled]="page===1"
+        >
+        <
+        </button>
+        Page: {{ page }}
+        <button
+        (click)="nextPage()"
+        [disabled]="page===2"
+        >
+        >
+        </button>
+    </div>
+</div>
