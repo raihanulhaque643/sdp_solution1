@@ -27,6 +27,10 @@ export class AuthorItemComponent implements OnInit {
   removeFavorite(author) {
     this.author.favorite = false
     let favorites = JSON.parse(localStorage.getItem('favorites'))
+    favorites = favorites.filter((item) => {
+      return item._id !== author._id
+    })
+    localStorage.setItem("favorites", JSON.stringify(favorites));
   }
 
 }
