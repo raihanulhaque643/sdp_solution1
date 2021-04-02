@@ -12,6 +12,11 @@ export class AuthorItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    let favorites = JSON.parse(localStorage.getItem('favorites'))
+    let exists = favorites.find(({ _id }) => this.author._id === _id)
+    if(exists) {
+      this.author.favorite = true
+    }
   }
 
   // Set favorite
