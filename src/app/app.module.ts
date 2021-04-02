@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './components/authors/authors.component';
 import { AuthorItemComponent } from './components/author-item/author-item.component';
+import { FavoritesComponent } from './components/pages/favorites/favorites.component';
+import { NavbarComponent } from './layouts/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorsComponent,
-    AuthorItemComponent
+    AuthorItemComponent,
+    FavoritesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
