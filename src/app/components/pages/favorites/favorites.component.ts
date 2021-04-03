@@ -6,11 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorites.component.css']
 })
 export class FavoritesComponent implements OnInit {
-  favorites = JSON.parse(localStorage.getItem('favorites'))
+  favorites;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.favorites = JSON.parse(localStorage.getItem('favorites'))
+  }
+
+  // Remove from UI
+  removeItem(newItem: string) {
+    this.favorites = this.favorites.filter(item => item._id !== newItem)
   }
 
 }

@@ -1,2 +1,5 @@
-<app-author-item *ngFor="let author of favorites" [author]="author">
+<app-author-item 
+(newItemEvent)='removeItem($event)'
+*ngFor="let author of favorites" [author]="author"
+>
 </app-author-item>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Author } from 'src/app/models/Author';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-author-item',
@@ -8,6 +9,7 @@ import { Author } from 'src/app/models/Author';
 })
 export class AuthorItemComponent implements OnInit {
   @Input() author: Author;
+  @Output() newItemEvent = new EventEmitter<string>();
 
   constructor() { }
 
@@ -46,6 +48,9 @@ export class AuthorItemComponent implements OnInit {
     } else {
       alert('This author does not belong to the favorites list')
     }
+
+    // event to be caught in favorites component page:
+    this.newItemEvent.emit(author._id)
   }
 
 }
