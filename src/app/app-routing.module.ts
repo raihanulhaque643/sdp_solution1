@@ -9,7 +9,8 @@ const routes: Routes = [
     loadChildren: () => import('./components/pages/favorites/favorites.module').then(m => m.FavoritesModule)
   },
   { path: '',   redirectTo: 'authors', pathMatch: 'full' },
-  { path: '**',   redirectTo: 'authors', pathMatch: 'full' }
+  { path: '**',   redirectTo: 'authors', pathMatch: 'full' },
+  { path: 'authors',   redirectTo: 'authors', pathMatch: 'full' }
 ];
 
 @NgModule({
