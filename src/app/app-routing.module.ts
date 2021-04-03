@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthorsComponent } from './components/authors/authors.component'
-import { FavoritesComponent } from './components/pages/favorites/favorites.component'
 
 const routes: Routes = [
-  { path: 'authors', component: AuthorsComponent },
-  { path: 'favorites', component: FavoritesComponent },
+  { path: 'authors',
+    loadChildren: () => import('./components/authors/authors.module').then(m => m.AuthorsModule)
+  },
+  { path: 'favorites',
+    loadChildren: () => import('./components/pages/favorites/favorites.module').then(m => m.FavoritesModule)
+  },
   { path: '',   redirectTo: 'authors', pathMatch: 'full' },
   { path: '**',   redirectTo: 'authors', pathMatch: 'full' }
 ];
